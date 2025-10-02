@@ -39,23 +39,27 @@ DB_DATABASE=electroperu
 DB_PORT=3306
 ```
 
-6. Diseñar la siguiente estructura de directorios
+6. Diseñar la siguiente estructura de directorios 📂
+
+**¿Cómo crear estructura de directorios?**
+* _ALT + 179 ... Barra vertical_
+* _ALT + 192 ... Conector en L_
+* _ALT + 195 ... Barra vertical con corte_
+* _ALT + 196 ... Barra horizontal_
 
 ```bash
-├── src/                  # Código fuente de la aplicación
-│   ├── components/       # Componentes reutilizables (ej. botones, tarjetas)
-│   ├── pages/            # Vistas principales de la aplicación
-│   ├── utils/            # Funciones de ayuda y utilidades
-│   └── index.js          # Punto de entrada de la aplicación
-├── public/               # Archivos estáticos (imágenes, fuentes, index.html)
-├── tests/                # Archivos de pruebas unitarias y de integración
-├── .gitignore            # Archivos y directorios ignorados por Git
-├── package.json          # Metadatos del proyecto y scripts
-└── README.md             # Este archivo
-```
-
-```bash
-|__ config
-|   |_ db.js
-|__ controllers
+├── 📂config
+│   └── 📄db.js
+├── 📂 controllers
+│   └── 📄productoController.js
+├── 📂 node_modules
+│   └── ...
+├── 📂 routes
+│   └── 📄productoController.js
+├── ⚙️.env
+├── 🔴.gitignore
+├── 📄 package-lock.json
+├── 📄 package.json
+├── 📄 README.md
+└── 📄 server.js
 ```
