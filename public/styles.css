@@ -1,0 +1,78 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.form-container,
+#productos-table {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+button {
+  padding: 10px 15px;
+  margin-right: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+button[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+}
+
+#cancel-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Estilos de la tabla */
+#productos-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#productos-table th,
+#productos-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+#productos-table th {
+  background-color: #f2f2f2;
+}
+
+.edit-btn {
+  background-color: #2196f3; /* Azul */
+  color: white;
+}
+
+.delete-btn {
+  background-color: #f44336; /* Rojo */
+  color: white;
+}

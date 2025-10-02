@@ -63,3 +63,8 @@ DB_PORT=3306
 ├── 📄 README.md
 └── 📄 server.js
 ```
+
+7. Ejecutar la aplicación con
+```
+nodemon server
+```
