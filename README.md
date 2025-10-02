@@ -1,7 +1,7 @@
 # Procedimientos
 
 1. Clonar repositorio
-git clone https://...
+git clone https://github.com/edwleo/electroperudemo.git
 
 2. Restaurar la BD
 ```sql
