@@ -41,6 +41,7 @@ DB_PORT=3306
 
 6. Diseñar la siguiente estructura de directorios
 
+```bash
 ├── src/                  # Código fuente de la aplicación
 │   ├── components/       # Componentes reutilizables (ej. botones, tarjetas)
 │   ├── pages/            # Vistas principales de la aplicación
@@ -51,3 +52,10 @@ DB_PORT=3306
 ├── .gitignore            # Archivos y directorios ignorados por Git
 ├── package.json          # Metadatos del proyecto y scripts
 └── README.md             # Este archivo
+```
+
+```bash
+|__ config
+|   |_ db.js
+|__ controllers
+```
