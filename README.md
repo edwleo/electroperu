@@ -1,9 +1,9 @@
 # Procedimientos
 
-1. Clonar repositorio
+1. 👝 Clonar repositorio
 git clone https://github.com/edwleo/electroperudemo.git
 
-2. Restaurar la BD
+2. ⛏️ Restaurar la BD
 ```sql
 CREATE DATABASE electroperu;
 USE electroperu;
@@ -17,7 +17,7 @@ CREATE TABLE productos
 )ENGINE = INNODB;
 ```
 
-3. Abrir proyecto _electroperu_ en VSCode
+3. 📋 Abrir proyecto _electroperu_ en VSCode
 
 4. Abrir la terminal **CTRL + Ñ** escribir:
 ```
