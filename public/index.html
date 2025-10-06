@@ -23,7 +23,7 @@
     <main class="container my-3">
       <h3>Mantenimiento de productos</h3>
 
-      <form action="" method="post" id="" autocomplete="off">
+      <form action="" method="post" id="form-producto" autocomplete="off">
         <div class="card">
           <div class="card-header">
             <strong>Complete los datos solicitados</strong>
@@ -96,6 +96,17 @@
         <!-- ./card -->
       </form>
 
+      <style>
+        .table tbody tr td:nth-child(4){ text-align: right; }
+        
+        .table tbody tr 
+          td:nth-child(1),
+          td:nth-child(3),
+          td:nth-child(5)
+          { text-align: center; }
+
+      </style>
+
       <div class="table-resposive mt-3">
         <table class="table table-bordered" id="tabla-productos">
           <colgroup>
@@ -107,11 +118,11 @@
           </colgroup>
           <thead>
             <tr>
-              <th>ID</th>
+              <th class="text-center">ID</th>
               <th>Descripción</th>
               <th>Garantía</th>
               <th>Precio</th>
-              <th>Acciones</th>
+              <th class="text-center">Acciones</th>
             </tr>
           </thead>
           <tbody>
@@ -125,7 +136,57 @@
     <footer></footer>
 
     <script>
-      
+      const API_URL = 'http://localhost:3000/api/productos'
+
+      const formulario = document.getElementById('form-producto')
+      const tabla = document.querySelector('#tabla-productos tbody')
+
+      //Obtener los datos (backend) > renderizar en la tabla
+      async function obtenerProductos(){
+        const response = await fetch(API_URL, { method: 'get' })
+        const productos = await response.json()
+        //console.log(productos)
+
+        //Reiniciamos el contenido de la tabla
+        tabla.innerHTML = '';
+        
+        productos.forEach(producto => {
+          //Crear una nueva fila y celdas con los datos contenidos en JSON
+          const row = tabla.insertRow() //<tr></tr>
+
+          row.insertCell().textContent = producto.id //<td></td>
+          row.insertCell().textContent = producto.descripcion //<td></td>
+          row.insertCell().textContent = producto.garantia //<td></td>
+          row.insertCell().textContent = producto.precio //<td></td>
+          
+          //La última celda contendrá 2 botones (funcionalidad)
+          const actionCell = row.insertCell()
+
+          //Botón 1: Editar
+          const editButton = document.createElement('button')
+          editButton.textContent = 'Editar'
+          editButton.classList.add('btn')
+          editButton.classList.add('btn-info')
+          editButton.classList.add('btn-sm')
+          editButton.onclick = () => cargarParaEdicion(producto)
+
+          //Botón 2: Eliminar
+          const deleteButton = document.createElement('button')
+          deleteButton.textContent = 'Eliminar'
+          deleteButton.classList.add('btn')
+          deleteButton.classList.add('btn-danger')
+          deleteButton.classList.add('btn-sm')
+          deleteButton.onclick = () => eliminarProducto(producto.id, producto.descripcion)
+
+          //Agregando ambos botones a la última celda
+          actionCell.appendChild(editButton)
+          actionCell.appendChild(deleteButton)
+        });
+      }
+
+      //Cuando la página esté lista, se ejecutará obtenerProductos
+      document.addEventListener('DOMContentLoaded', obtenerProductos)
+
     </script>
 
   </body>
