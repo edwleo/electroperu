@@ -1,7 +1,7 @@
 # Procedimientos
 
 1. 👝 Clonar repositorio
-git clone https://github.com/edwleo/electroperudemo.git
+git clone https://github.com/edwleo/electroperu.git
 
 2. ⛏️ Restaurar la BD
 ```sql
