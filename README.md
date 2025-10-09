@@ -15,11 +15,24 @@ CREATE TABLE productos
   garantia    TINYINT 		  NOT NULL,
 	precio      DECIMAL(7,2)	NOT NULL
 )ENGINE = INNODB;
+
+CREATE TABLE personas
+(
+	id 			INT AUTO_INCREMENT PRIMARY KEY,
+    apellidos	VARCHAR(40) 	NOT NULL,
+    nombres 	VARCHAR(40)		NOT NULL,
+    dni			CHAR(8) 		NOT NULL,
+    telefono 	CHAR(9) 		NOT NULL,
+    fotografia 	VARCHAR(200)	NULL,
+    create_at	DATETIME 		NOT NULL DEFAULT NOW(),
+    CONSTRAINT uk_dni UNIQUE (dni)
+);
 ```
 
 3. 📋 Abrir proyecto _electroperu_ en VSCode
 
 4. Abrir la terminal **CTRL + Ñ** escribir:
+
 ```
 npm install
 ```

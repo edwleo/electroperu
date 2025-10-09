@@ -40,17 +40,13 @@ async function obtenerProductos(){
     //Botón 1: Editar
     const editButton = document.createElement('button')
     editButton.textContent = 'Editar'
-    editButton.classList.add('btn')
-    editButton.classList.add('btn-info')
-    editButton.classList.add('btn-sm')
+    editButton.classList.add('btn', 'btn-info', 'btn-sm')
     editButton.onclick = () => cargarParaEdicion(producto)
 
     //Botón 2: Eliminar
     const deleteButton = document.createElement('button')
     deleteButton.textContent = 'Eliminar'
-    deleteButton.classList.add('btn')
-    deleteButton.classList.add('btn-danger')
-    deleteButton.classList.add('btn-sm')
+    deleteButton.classList.add('btn', 'btn-danger', 'btn-sm')
     deleteButton.onclick = () => eliminarProducto(producto.id, producto.descripcion)
 
     //Agregando ambos botones a la última celda
